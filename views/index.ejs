@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+      body{
+        height: 100vh;
+        background: linear-gradient(45deg,#eade96a8,#98e4e7bf);
+      }
+      h1 {
+        margin-top: 50px;
+        text-align: center;
+      }
+      .box{
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .location-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        width: 90%;
+        background: linear-gradient(45deg,#82b6f7e0,#7de6eee1);
+        box-shadow: 2px 2px 3px 3px #5b5b5b;
+        border-radius: 15px 0px 15px 0px;
+      }
+      .location-box h2{
+        text-align: center;
+      }
+      h3{
+        font-size: 20px;
+        letter-spacing: 10px;
+        color: #5b5b5b;
+        text-align: center;
+      }
+      @media only screen and (max-width : 600px) {
+        .location-box{
+            padding: 10px;
+        }
+        .location-box h2{
+            font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ACCIDENT LOCATION</h1>
+    <div class="box">
+      <div class="location-box">
+        <h2>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=<%=link%>"
+            target="_blank"
+            >https://www.google.com/maps/search/?api=1&query=<%=link%></a
+          >
+        </h2>
+      </div>
+    </div>
+    <h3>V-ALERT</h3>
+  </body>
+  <script>
+    setTimeout(function () {
+      window.location.reload();
+    }, 5000);
+  </script>
+</html>
