@@ -10,9 +10,9 @@ let location = "";
 app.get("/",(req,res)=>{
     res.render("index",{link : location});
 });
-app.post("/location",(req,res)=>{
-    location = req.body.location;
-    res.redirect("/");
+app.get("/api/:coord",(req,res)=>{
+    location = req.params['coord'];
+    res.send();
 });
 const port = 3000 || process.env.PORT;
 app.listen(port,()=>{
